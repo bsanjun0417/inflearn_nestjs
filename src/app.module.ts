@@ -7,6 +7,7 @@ import { PostsModel } from './posts/entities/posts.entity';
 import { UsersModule } from './users/users.module';
 import { UsersModel } from './users/entities/users.entity';
 import { UsersService } from './users/users.service';
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     PostsModule,
@@ -31,6 +32,7 @@ import { UsersService } from './users/users.service';
       synchronize:true,
     }),
     UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
